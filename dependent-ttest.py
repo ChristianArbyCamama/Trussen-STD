@@ -42,10 +42,11 @@ class DependentTtest:
         print()
         print(f"*" * 50, end="\n\n")
         print(f"{group_name} Result")
+        print(f"Mean difference: {self.mean_difference}")
         print(f"T-statistic: {self.statistic}")
         print(f"P-value: {self.pvalue}")
-        print(f"Critical-value: {self.critical_value}")
         print(f"Degree of freedom: {self.degree_of_freedom}")
+        print(f"Critical-value: {self.critical_value}")
 
         ###
         # The first method compares the absolute value of the test statistic (calculated from your data)
