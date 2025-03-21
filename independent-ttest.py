@@ -41,7 +41,7 @@ class IndependentTTest:
         self.mean_difference = np.mean(group2_scores) - np.mean(group1_scores)
 
     def display_independent_ttest_result(
-        self, group1_scores, group2_scores, group1_name, group2_name
+        self, group1_scores, group2_scores, group1_name, group2_name, test
     ):
         self.group1_name = group1_name
         self.group2_name = group2_name
@@ -49,7 +49,7 @@ class IndependentTTest:
         self.calculate_critical_value(self.alpha, self.degree_of_freedom)
 
         print(f"*" * 50, end="\n\n")
-        print(f"{group1_name} vs {group2_name} Independent T-Test Result")
+        print(f"{group1_name} vs {group2_name} Independent T-Test Result ({test})")
         print(f"Mean difference: {self.mean_difference}")
         print(
             f"Levene's Test P-value: {self.levene_pvalue} {'(Equal Variances Assumed)' if self.equal_variance else '(Unequal Variances Assumed)'}"
@@ -121,6 +121,14 @@ independent_ttest.display_independent_ttest_result(
     experimental_pretest_scores,
     "Control Group",
     "Experimental Group",
+    "Pre-test",
+)
+independent_ttest.display_independent_ttest_result(
+    control_posttest_scores,
+    experimental_posttest_scores,
+    "Control Group",
+    "Experimental Group",
+    "Post-test",
 )
 independent_ttest.plot_result(
     control_pretest_scores, experimental_pretest_scores, "Pre-Test"
