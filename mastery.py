@@ -26,7 +26,7 @@ class Mastery:
         labels = ["Control Group", "Experimental Group"]
         values = [control_mastery, experimental_mastery]
 
-        plt.bar(labels, values, color=["blue", "green"])
+        plt.bar(labels, values, color=["red", "blue"])
         plt.ylabel("Mastery Percentage (%)")
         plt.title("Mastery Percentage Comparison")
         plt.ylim(0, 100)
