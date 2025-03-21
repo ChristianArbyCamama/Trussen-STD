@@ -73,9 +73,9 @@ class IndependentTTest:
 
         # Determine direction of change
         if self.mean_difference > 0:
-            print(f"{group1_name} has a higher mean than {group2_name}.")
-        elif self.mean_difference < 0:
             print(f"{group2_name} has a higher mean than {group1_name}.")
+        elif self.mean_difference < 0:
+            print(f"{group1_name} has a higher mean than {group2_name}.")
         else:
             print("No difference in means.")
 

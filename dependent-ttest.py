@@ -81,6 +81,7 @@ class DependentTtest:
 
         plt.plot(self.pretest_scores, "r-o")
         plt.plot(self.posttest_scores, "b-o")
+        plt.yticks(range(min(self.pretest_scores), max(self.posttest_scores) + 1, 1))
         plt.title(f"{self.group_name} Dependent T-Test Result")
         plt.legend(["Pretest", "Posttest"])
         plt.ylabel("Difference in Scores")
