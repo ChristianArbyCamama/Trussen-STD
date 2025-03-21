@@ -1,0 +1,12 @@
+Dependent (Paired) T-Test (Done)
+Independent T-Test (Done)
+Mastery % (Done)
+Learning Gains (Done)
+
+# TODO in Results and Discussion
+1. Update timeline of pretest, intervention period, and posttest
+2. SCORES TABLE HERE -> 2 Tables -> Control & Experimental -> Student #, Pretest, Posttest
+3. Paired ttest -> Bulleted values & Essay & Graph
+4. Indepent ttest
+5. Mastery %
+6. Learning Gains
