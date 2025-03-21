@@ -58,7 +58,6 @@ class IndependentTTest:
         print(f"P-value: {self.pvalue}")
         print(f"Critical-value: {self.critical_value}")
         print(f"Degree of freedom: {self.degree_of_freedom}")
-        print(f"Mean Difference: {self.mean_difference}")
 
         # Method 1: Compare t-statistic with critical value
         if abs(self.statistic) > self.critical_value:
