@@ -85,7 +85,7 @@ class DependentTtest:
         plt.yticks(range(min(self.pretest_scores), max(self.posttest_scores) + 1, 1))
         plt.title(f"{self.group_name} Dependent T-Test Result")
         plt.legend(["Pretest", "Posttest"])
-        plt.ylabel("Difference in Scores")
+        plt.ylabel("Score")
         plt.xlabel("Students")
         plt.show()
 
