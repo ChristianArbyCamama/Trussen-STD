@@ -50,6 +50,7 @@ class IndependentTTest:
 
         print(f"*" * 50, end="\n\n")
         print(f"{group1_name} vs {group2_name} Independent T-Test Result")
+        print(f"Mean difference: {self.mean_difference}")
         print(
             f"Levene's Test P-value: {self.levene_pvalue} {'(Equal Variances Assumed)' if self.equal_variance else '(Unequal Variances Assumed)'}"
         )
