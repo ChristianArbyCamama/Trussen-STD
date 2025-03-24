@@ -8,7 +8,6 @@ from data import (
     experimental_posttest_scores,
 )
 
-
 class IndependentTTest:
     def __init__(self):
         self.alpha = 0.05  # Significance level (two-tailed)
@@ -52,7 +51,12 @@ class IndependentTTest:
         print(f"{group1_name} vs {group2_name} Independent T-Test Result ({test})")
         print(f"Mean difference: {self.mean_difference}")
         print(
-            f"Levene's Test P-value: {self.levene_pvalue} {'(Equal Variances Assumed)' if self.equal_variance else '(Unequal Variances Assumed)'}"
+            f"Levene's Test P-value: {self.levene_pvalue} \
+            {
+                '(Equal Variances Assumed)' 
+                if self.equal_variance 
+                else '(Unequal Variances Assumed)'
+            }"
         )
         print(f"T-statistic: {self.statistic}")
         print(f"P-value: {self.pvalue}")
@@ -103,7 +107,6 @@ class IndependentTTest:
         plt.ylabel("Probability Density")
         plt.legend()
         plt.show()
-
 
 # Control Group Data
 control_pretest_scores = np.array(control_pretest_scores)

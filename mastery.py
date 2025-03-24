@@ -5,7 +5,6 @@ from data import (
     max_score,
 )
 
-
 class Mastery:
     def compute_mastery(self, scores, group_name):
         student_who_mastered = 0
@@ -36,7 +35,6 @@ class Mastery:
             plt.text(i, v + 2, f"{v}%", ha="center", fontsize=12)
 
         plt.show()
-
 
 mastery = Mastery()
 control_mastery = mastery.compute_mastery(control_posttest_scores, "Control Group")

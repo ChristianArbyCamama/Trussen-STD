@@ -8,7 +8,6 @@ from data import (
     max_score,
 )
 
-
 class LearningGains:
     def compute_learning_gains(self, pretest_scores, posttest_scores):
         return [
