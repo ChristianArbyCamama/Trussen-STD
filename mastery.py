@@ -22,18 +22,27 @@ class Mastery:
         return self.mastery
 
     def plot_result(self, control_mastery, experimental_mastery):
-        # Plot the results
+        # Data for the pie chart
         labels = ["Control Group", "Experimental Group"]
         values = [control_mastery, experimental_mastery]
+        colors = ["red", "blue"]
 
-        plt.bar(labels, values, color=["red", "blue"])
-        plt.ylabel("Mastery Percentage (%)")
-        plt.title("Mastery Percentage Comparison")
-        plt.ylim(0, 100)
+        # Function to show actual values instead of computed percentages
+        def format_label(pct, all_vals):
+            absolute = int(round(pct * sum(all_vals) / 100.0))
+            return f"{absolute}%"
 
-        # Display values on bars
-        for i, v in enumerate(values):
-            plt.text(i, v + 2, f"{v}%", ha="center", fontsize=12)
+        # Create pie chart
+        plt.figure(figsize=(6, 6))
+        plt.pie(
+            values,
+            labels=labels,
+            colors=colors,
+            autopct=lambda pct: format_label(pct, values),
+            textprops={"fontsize": 14},
+        )
+        plt.title("Mastery Percentage Comparison", fontdict={"fontsize": 16})
+        plt.axis("equal")  # Equal aspect ratio ensures that pie is drawn as a circle
 
         plt.show()
 
