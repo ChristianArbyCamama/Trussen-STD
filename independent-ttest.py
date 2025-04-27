@@ -8,6 +8,7 @@ from data import (
     experimental_posttest_scores,
 )
 
+
 class IndependentTTest:
     def __init__(self):
         self.alpha = 0.05  # Significance level (two-tailed)
@@ -107,6 +108,7 @@ class IndependentTTest:
         plt.ylabel("Probability Density")
         plt.legend()
         plt.show()
+
 
 # Control Group Data
 control_pretest_scores = np.array(control_pretest_scores)
