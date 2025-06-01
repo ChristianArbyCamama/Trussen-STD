@@ -8,6 +8,7 @@ from data import (
     experimental_posttest_scores,
 )
 
+
 class DependentTtest:
     def __init__(self):
         # Significance level (two-tailed)
@@ -87,6 +88,7 @@ class DependentTtest:
         plt.ylabel("Score")
         plt.xlabel("Students")
         plt.show()
+
 
 # Control Group Data
 control_pretest_scores = np.array(control_pretest_scores)
