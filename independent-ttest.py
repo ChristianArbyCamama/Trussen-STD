@@ -52,7 +52,12 @@ class IndependentTTest:
         print(f"{group1_name} vs {group2_name} Independent T-Test Result ({test})")
         print(f"Mean difference: {self.mean_difference}")
         print(
-            f"Levene's Test P-value: {self.levene_pvalue} {'(Equal Variances Assumed)' if self.equal_variance else '(Unequal Variances Assumed)'}"
+            f"Levene's Test P-value: {self.levene_pvalue} \
+            {
+                '(Equal Variances Assumed)' 
+                if self.equal_variance 
+                else '(Unequal Variances Assumed)'
+            }"
         )
         print(f"T-statistic: {self.statistic}")
         print(f"P-value: {self.pvalue}")

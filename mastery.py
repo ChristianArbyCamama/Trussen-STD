@@ -15,7 +15,7 @@ class Mastery:
                 student_who_mastered += 1
 
         self.student_who_mastered = student_who_mastered
-        self.mastery = round(student_who_mastered / len(scores), 2) * 100
+        self.mastery = round((student_who_mastered / len(scores)) * 100, 2)
 
         print(f"Mastery % of {group_name}:", self.mastery)
 
