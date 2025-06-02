@@ -38,10 +38,12 @@ class DependentTtest:
         self.posttest_scores = posttest_scores
 
         self.compute_dependent_ttest(self.pretest_scores, self.posttest_scores)
+        self.std_difference = np.std(self.posttest_scores - self.pretest_scores, ddof=1)
 
         print()
         print(f"*" * 50, end="\n\n")
         print(f"{group_name} Result")
+        print(f"Standard deviation of differences: {self.std_difference}")
         print(f"Mean difference: {self.mean_difference}")
         print(f"T-statistic: {self.statistic}")
         print(f"P-value: {self.pvalue}")
