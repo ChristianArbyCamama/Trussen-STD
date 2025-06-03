@@ -8,6 +8,7 @@ from data import (
     max_score,
 )
 
+
 class LearningGains:
     def compute_learning_gains(self, pretest_scores, posttest_scores):
         return [
@@ -31,6 +32,15 @@ class LearningGains:
         plt.xticks(rotation=45)
         plt.show()
 
+    def display_stats(self, learning_gains, group_name):
+        mean_val = np.mean(learning_gains)
+        std_val = np.std(learning_gains, ddof=1)
+
+        print(f"*" * 50, end="\n\n")
+        print(f"Group: {group_name}")
+        print(f"Mean: {mean_val:.2f}")
+        print(f"Standard Deviation: {std_val:.2f}")
+
 
 # Compute learning gains
 lg = LearningGains()
@@ -42,3 +52,6 @@ experimental_gains = lg.compute_learning_gains(
 )
 lg.plot_result(control_gains, "Control Group")
 lg.plot_result(experimental_gains, "Experimental Group")
+
+lg.display_stats(control_gains, "Control Group")
+lg.display_stats(experimental_gains, "Experimental Group")
